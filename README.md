@@ -21,3 +21,13 @@ Adjust `.csproj` accordingly, example snippet:
 
 </Project>
 ```
+
+## appveyor.yml
+
+Add this artifact filter to grab symbols and live packages:
+
+```yml
+artifacts:
+- path: 'bin**\*.nupkg'
+- path: 'bin**\*.snupkg'
+```
