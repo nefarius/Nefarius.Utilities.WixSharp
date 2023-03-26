@@ -19,7 +19,7 @@ Adjust `.csproj` accordingly, example snippet:
     <Description>Summary. README takes priority over this but nice to have.</Description>
   </PropertyGroup>
 
-  <Import Project="CommonProjectProperties.targets" />
+  <Import Project="$(SolutionDir)CommonProjectProperties.targets" />
 
 </Project>
 ```
