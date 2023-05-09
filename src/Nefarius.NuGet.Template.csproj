@@ -12,7 +12,4 @@
     <PackageProjectUrl>https://github.com/nefarius/Nefarius.NuGet.Template</PackageProjectUrl>
     <Description>Summary. README takes priority over this but nice to have.</Description>
   </PropertyGroup>
-
-  <Import Project="$(SolutionDir)CommonProjectProperties.targets" />
-
 </Project>
