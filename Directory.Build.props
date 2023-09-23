@@ -12,7 +12,6 @@
 
     <!-- Common solution settings -->
     <OutputPath>$(SolutionDir)bin\</OutputPath>
-    <PackageOutputDir>$(SolutionDir)bin\</PackageOutputDir>
     <LangVersion>latest</LangVersion>
 
     <!-- Docs and symbols generation -->
