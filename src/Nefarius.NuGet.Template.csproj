@@ -13,8 +13,12 @@
     <Description>Summary. README takes priority over this but nice to have.</Description>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="GitVersion.MsBuild" Version="5.12.0">
+    <PackageReference Include="MinVer" Version="4.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
