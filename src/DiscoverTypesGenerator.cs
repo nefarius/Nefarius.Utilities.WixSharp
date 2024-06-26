@@ -46,7 +46,7 @@ public sealed class DiscoverTypesGenerator : ISourceGenerator
 
         foreach (string? location in assemblyLocations)
         {
-            sb.AppendLine($"            \"{location}\",");
+            sb.AppendLine($"            \"{location?.Replace("\\", "\\\\")}\",");
         }
 
         sb.AppendLine("        };");
