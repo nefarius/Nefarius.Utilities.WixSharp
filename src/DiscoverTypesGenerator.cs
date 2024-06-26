@@ -6,7 +6,7 @@ using Microsoft.CodeAnalysis.Text;
 namespace Nefarius.Utilities.WixSharp;
 
 [Generator]
-public sealed class DiscoverTypesGenerator : ISourceGenerator
+internal sealed class DiscoverTypesGenerator : ISourceGenerator
 {
     public void Initialize(GeneratorInitializationContext context)
     {
@@ -16,15 +16,15 @@ public sealed class DiscoverTypesGenerator : ISourceGenerator
     public void Execute(GeneratorExecutionContext context)
     {
         // Create a list to store assembly locations
-        HashSet<string> assemblyLocations = new HashSet<string>();
+        HashSet<string> assemblyLocations = new();
 
         // Get all the referenced assemblies
         foreach (MetadataReference? reference in context.Compilation.References)
         {
-            PortableExecutableReference? metadataReference = reference as PortableExecutableReference;
-            if (metadataReference != null && !string.IsNullOrEmpty(metadataReference.FilePath))
+            if (reference is PortableExecutableReference metadataReference &&
+                !string.IsNullOrEmpty(metadataReference.FilePath))
             {
-                assemblyLocations.Add(metadataReference.FilePath);
+                assemblyLocations.Add(metadataReference.FilePath!);
             }
         }
 
@@ -35,7 +35,7 @@ public sealed class DiscoverTypesGenerator : ISourceGenerator
 
     private string GenerateSource(IEnumerable<string> assemblyLocations)
     {
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new();
         sb.AppendLine("using System.Collections.Generic;");
         sb.AppendLine("namespace Nefarius.Utilities.WixSharp");
         sb.AppendLine("{");
