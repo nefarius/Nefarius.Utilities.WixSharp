@@ -5,4 +5,6 @@
 [![Nuget](https://img.shields.io/nuget/v/Nefarius.Utilities.WixSharp)](https://www.nuget.org/packages/Nefarius.Utilities.WixSharp/)
 [![Nuget](https://img.shields.io/nuget/dt/Nefarius.Utilities.WixSharp)](https://www.nuget.org/packages/Nefarius.Utilities.WixSharp/)
 
+Utilities for WixSharp-based setup projects.
+
 WIP!
