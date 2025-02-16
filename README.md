@@ -11,3 +11,7 @@ Utilities for [WixSharp](https://github.com/oleg-shilo/wixsharp)-based setup pro
 
 Small extension library for WixSharp (used and tested with WiX v4 and v5) to handle some tasks shared amongst a few of
 my setup projects.
+
+## Documentation
+
+[Link to API docs](docs/index.md).
